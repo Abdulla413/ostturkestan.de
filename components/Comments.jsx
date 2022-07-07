@@ -17,10 +17,6 @@ function Comments({slug}) {
     });
   }, []);
 
-  
-
-
-
   return (
   
  <div>{ comments.length > 0 && (<div className="shadow-lg rounded-lg p-8 pb-12 mb-8">

@@ -19,7 +19,7 @@ Zeitgleich wurden mehr als 900.000 Kinder, deren Eltern in Lagern festgehalten w
 Darüber hinaus verbrennen die chinesischen Kolonialtruppen in Ostturkestan veröffentlichte Bücher und verbieten den Gebrauch der Sprachen der Uiguren, Kasachen, Kirgisen und anderer ethnischer Gruppen in allen Bereichen. Die chinesischen Invasoren schränkten
 auch ihren religiösen Glauben ein, verbrannten den Koran und zerstörten mehr als 20.000 Moscheen und Gotteshäuser. Sie zwingen auch uigurische Mädchen mit Chinesen heiraten. Wenn die Mädchen nicht möchten, entführten die Regierung die Mädchen und ihre Familie und steckten sie in Konzentrationslager, mit der Beschuldigung, dass sie ein Problem mit ihrer Politik hätten.<br/>
 Außerdem vernichten die chinesischen Kolonialtruppen die Uigurische Kulturdenkmäler, ethnische Kunst, nationale Architektur und Konstruktion, damit wollen sie unsere Kultur vom der Erde löschen! 
-Somit begehen die China im besetzten Ostturkestan Völkermord an den Uiguren. Die chinesischen Invasoren haben in Ostturkestan einen hochtechnisierten Polizeistaat errichtet, wie im Buch "1984" beschrieben, die täglichen Aktivitäten der Menschen werden genau überwacht, und Nachtwächter werden unter dem Deckmantel von " Civil Servant-Family Pair Up"-Politik zu ihren Häusern entsandt und das Privatsphäre wird überwacht.<br/>
+Somit begehen die China im besetzten Ostturkestan Völkermord an den Uiguren. Die chinesischen Invasoren haben in Ostturkestan einen hochtechnisierten Polizeistaat errichtet, wie im Buch “1984” beschrieben, die täglichen Aktivitäten der Menschen werden genau überwacht, und Nachtwächter werden unter dem Deckmantel von  “Civil Servant-Family Pair Up”-Politik zu ihren Häusern entsandt und das Privatsphäre wird überwacht.<br/>
 Tatsächlich ist der chinesische Völkermord an den Menschen in Ostturkestan und die brutale Unterdrückung von Christen, Katholiken, Islamisten, Falun Gong-Praktizierenden, 
 Tibetern und Hongkongern in den chinesischen Provinzen nicht nur Massaker an diesen Nationen, sondern auch Verbrechen gegen die Menschlichkeit! Das Wiederholte „Konzentrationslager“, des Holocaust, im 21. Jahrhundert! Wir rufen die Weltöffentlichkeit auf, über die chinesischen Massaker in Ostturkestan nicht zu schweigen und durch Ihr Schweigen nicht an diesen Massakern mit Chinesen mitschuldig zu machen! 
 Und wir hoffen und bitten Sie, liebe Damen und Herren, einen persönlichen Beitrag durch Boykottierung der chinesischen Waren und mit dem Druck auf Ihre eigenen Regierungen zur Schließung der von den chinesischen Invasoren in Ostturkestan errichteten „Konzentrationslager“ beitragen! damit unterstützen Sie die Unabhängigkeit Ostturkestans und die Freiheit der Uiguren!
@@ -29,6 +29,7 @@ Und wir hoffen und bitten Sie, liebe Damen und Herren, einen persönlichen Beitr
 }
 
 export default Ostturkestan
+
 
 
 

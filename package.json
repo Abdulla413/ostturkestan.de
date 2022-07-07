@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.6.6",
     "graphql": "^16.5.0",
     "graphql-request": "^4.3.0",
     "html-react-parser": "^2.0.0",
