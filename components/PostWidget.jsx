@@ -1,9 +1,9 @@
 import moment from "moment"
 import Link from "next/link"
-import { Input } from "postcss"
 import React from "react"
 import {useState, useEffect}from "react"
 import {getRecentPosts, getSimilarPosts} from "../services"
+
 
 function PostWidget({categories, slug}) {
   
@@ -19,9 +19,8 @@ function PostWidget({categories, slug}) {
         setRelatedPosts(result);
       });
     }
-  }, [slug]);
+  }, [slug, categories]);
 
-  console.log(relatedPosts, "i am here")
 
   return (
 

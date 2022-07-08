@@ -13,9 +13,9 @@ function Comments({slug}) {
       setComments(result)
       
       
-      console.log(result)
+    
     });
-  }, []);
+  }, [slug]);
 
   return (
   

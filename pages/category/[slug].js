@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { getCategoriesPost, getCategories } from "../../services"
-import { PostCard, Categories, Loader, Header } from "../../components"
+import { PostCard, Categories, Loader, Header, Footer } from "../../components"
 
 
 function CategoryPost({ posts }) {
@@ -33,6 +33,7 @@ function CategoryPost({ posts }) {
 
                 </div>
             </div>
+            <Footer/>
 
         </div>
         </>
@@ -44,10 +45,7 @@ export default CategoryPost
 
 
 export async function getStaticProps({ params }) {
-    console.log(params, "i am param")
     const posts = await getCategoriesPost(params.slug)
-    console.log(posts, "i am post at getkategories")
-
     return {
         props: { posts }
     }
@@ -59,6 +57,6 @@ export async function getStaticPaths() {
         paths: categories.map(({ slug }) => ({
             params: { slug }
         })),
-        fallback: false
+        fallback: true
     }
 }

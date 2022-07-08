@@ -1,10 +1,14 @@
 import React from 'react'
 import {getPosts, getPostDetails} from "../../services"
-import {PostDetail, Categories, PostWidget, Autor, Comments, CommentsForm, Layout} from "../../components"
+import {PostDetail, Categories, PostWidget, Autor, Comments, CommentsForm, Layout, Loader} from "../../components"
+import {useRouter} from "next/router"
 
 
 function PostDetails({post}) {
-  console.log(post, "iam post nime gap")
+  const router = useRouter()
+  if(router.isFallback){
+    return <Loader/>
+  }
   return (
     
     <Layout className='container mx-auto px-10 mb-8'>
@@ -32,7 +36,6 @@ export default PostDetails
 
 export async function getStaticProps({params}){
   const data=await getPostDetails(params.slug)
-  console.log(data, "i am post at home")
 
   return {
     props:{post:data}
@@ -45,6 +48,6 @@ export async function getStaticPaths(){
     paths:posts.map(({node:{slug}})=>({
       params:{slug}
     })),
-    fallback:false
+    fallback:true
   }
 }

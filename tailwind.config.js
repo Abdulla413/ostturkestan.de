@@ -13,17 +13,11 @@ module.exports = {
 
       backgroundImage: {
   
-        'header-image': "url('/image/toghraq2.jpg')",
+        'header-image': "url('/image/toghraq.png')",
       }
 
     },
-    maxHeight: {
-      '0': '0',
-      '1/4': '25%',
-      '1/2': '50%',
-      '3/4': '75%',
-      'full': '100%',
-     }
+   
 
   },
   plugins: [],

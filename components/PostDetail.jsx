@@ -46,7 +46,7 @@ function PostDetail({ post }) {
 
 
   return (
-    <div className='shadow-lg rounded-lg lg:p-8 pb-12 mb-8'>
+    <>    <div className='shadow-lg rounded-lg lg:p-8 pb-12 mb-8'>
       <div className='relative overflow-hidden shadow-md mb-6'>
         <img
           src={post.featuredImage.url}
@@ -81,6 +81,8 @@ function PostDetail({ post }) {
           })}
       </div>
     </div>
+    </>
+
   )
 }
 

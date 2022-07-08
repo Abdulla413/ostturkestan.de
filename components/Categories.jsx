@@ -19,6 +19,7 @@ function Categories() {
 
 
   return (
+    <>
     <div className="bg-gray-200 text-black shadow-lg rounded-lg p-4 my-4 ">
       <h3 className="text-xl text-white text-center bg-gray-800 rounded-lg m-4 font-semibold p-4 uppercase">
         Katogories
@@ -34,6 +35,8 @@ function Categories() {
 
       ))}
     </div>
+    
+    </>
   )
 }
 

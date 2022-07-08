@@ -41,9 +41,8 @@ export default function Home({posts}) {
   )
 }
 
-export async function getStaticProps({locale}){
+export async function getStaticProps(){
   const posts=(await getPosts())||[]
-  console.log(posts, "i am post at home") 
   return {
     props:{posts}
   }
