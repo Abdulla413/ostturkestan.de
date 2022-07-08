@@ -14,7 +14,6 @@ function Categories() {
   }, [])
 
 
-  console.log(categories, "i am categories")
 
 
 

@@ -90,21 +90,21 @@ export default function Header() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-auto items-center justify-between">
-                    <div className="bg-blue-500 bg-opacity-30">
-                        <Link href="/" className="">
-                            <a className="mb-4 md:hidden sm:block">
+                <div className="flex w-full flex-auto items-center justify-between">
+                    
+                        <Link href="/">
+                            <a className="md:hidden sm:block">
                                 <Image src="/logo.png"
-                                    width={40}
-                                    height={40} alt="logo" />
+                                    width={30}
+                                    height={43} alt="logo" />
                             </a>
                         </Link>
-                    </div>
+            
                     <div className="-mr-2 flex md:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             type="button"
-                            className="bg-blue-500 inline-flex items-center justify-center p-2 rounded-md text-gray-100 hover:text-white hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 focus:ring-white"
+                            className="bg-blue-800 inline-flex items-center justify-center p-2 rounded-md text-gray-100 hover:text-white hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 focus:ring-white"
                             aria-controls="mobile-menu"
                             aria-expanded="false"
                         >
@@ -113,7 +113,7 @@ export default function Header() {
                                 <svg
                                     className="block h-6 w-6"
                                     xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
+                                            fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
                                     aria-hidden="true"
