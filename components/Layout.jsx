@@ -5,7 +5,7 @@ import Footer from "./Footer"
 function Layout({ title, keywords, description, children }) {
     return (
 
-        <div className='container mx-auto px-10 mb-8'>
+        <div className='container mx-auto px-5 mb-4'>
             <Head>
                 <title>{title}</title>
                 <meta name="keywords" content={keywords} />
@@ -14,7 +14,7 @@ function Layout({ title, keywords, description, children }) {
             </Head>
             <Header />
 
-            <main className="container mx-auto my-7">{children}</main>
+            <main className="container mx-auto my-5">{children}</main>
 
             <Footer/>
         </div>

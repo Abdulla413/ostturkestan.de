@@ -10,7 +10,7 @@ export default function Home({posts}) {
 
   
   return (
-    <div className='container mx-auto px-10 mb-8'>
+    <div className='container mx-auto px-5 mb-4'>
       <Head>
         <title>Ostturkestan Official Page </title>
         <link rel='icon' href='/ostturkestan-logo-blue.png' />
@@ -28,7 +28,7 @@ export default function Home({posts}) {
 
 
         <div className="lg:col-span-4 col-span-1">
-          <div className="lg:sticky relative top-8">
+          <div className="bottom-4 lg:sticky relative top-8">
             <PostWidget />
             <Categories/>
 

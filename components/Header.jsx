@@ -1,151 +1,236 @@
-import Link from "next/link"
+import React, { useState } from 'react'
 import Image from "next/image"
-import { useState } from "react"
-import { Transition } from "@headlessui/react";
+import Link from "next/link"
+import { Fragment } from 'react'
+import { Menu, Transition } from '@headlessui/react'
+import { ChevronDownIcon } from '@heroicons/react/solid'
 
 
+function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+}
 
 
-
-export default function Header() {
+function Header() {
     const [isOpen, setIsOpen] = useState(false)
-
-
     return (
-        <>
-            <header className="flex text-gray-100 bg-[url('/image/toghraq.png')] p-8">
-                <div className="flex flex-auto flex-end items-center justify-between">
+
+
+        <div className="bg-blue-500 text-white dark:bg-gray-800">
+            <nav className="container hidden md:block dark:bg-gray-800 ">
+                <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-3 py-2.5">
                     <div className="flex items-center ">
-                        <Link href="/">
-                            <a className="mb-4 hidden md:mb-0 md:block">
-                                <Image src="/logo.png"
-                                    width={200}
-                                    height={300} alt="logo" />
+                        <Link href="/" >
+                            <a> <Image src="/logo.png"
+                                height={300}
+                                width={200}
+                                alt="Logo" />
 
+                            </a>
+
+                        </Link>
+                        <Link href="/">
+                            <a>
+                                <h2 className="self-center text-2xl font-semibold ml-4 whitespace-nowrap dark:text-white"> Ostturkestanischer
+
+                                    <br />Jugendverein<br />in Deutschland</h2>
                             </a>
                         </Link>
 
-                        <h2 className='text-2xl text-white px-3 hidden md:block'>Ostturkestanischer <br /> Jugendverein<br /> in Deutchland</h2>
-
                     </div>
+                    <div className="flex justify-end text-lg items-center hidden md:block ">
+                        <Link href="/">
+                            <a className="mx-2 cursor-pointer uppercase bg-blue-500 bg-opacity-50 rounded px-1 hover:text-indigo-300">
+                                home
+                            </a>
+                        </Link>
+                        <Link href="/about">
+                            <a className="mx-2cursor-pointer uppercase bg-blue-500 bg-opacity-50 rounded px-1 hover:text-indigo-300">
+                                about
+                            </a>
+                        </Link>
+                        <Link href="/ostturkestan">
+                            <a className="mx-2 cursor-pointer uppercase bg-blue-500 rounded bg-opacity-50 px-1 hover:text-indigo-300">
+                                Ostturkestan
+                            </a>
+                        </Link>
+                        <Link href="/uiguren">
+                            <a className="mx-2 cursor-pointer uppercase bg-blue-500 bg-opacity-50 rounded px-1 hover:text-indigo-300">
+                                uiguren
+                            </a>
+                        </Link>
+                        <Link href="/genocide">
+                            <a className="mx-2 cursor-pointer uppercase bg-blue-500 bg-opacity-50 rounded px-1 hover:text-indigo-300">
+                                genozid
+                            </a>
+                        </Link>
+                        <Link href="/category/nachrichten">
+                            <a className="mx-2 cursor-pointer uppercase bg-blue-500 bg-opacity-50 rounded px-1 hover:text-indigo-300">
+                                nachrichten
+                            </a>
+                        </Link>
+                        <Link href="/category/blog">
+                            <a className="mx-2 cursor-pointer uppercase bg-blue-500 bg-opacity-50 rounded px-1 hover:text-indigo-300">
+                                blog
+                            </a>
+                        </Link>
+                        <Link href="/category/project">
+                            <a className="mx-2 cursor-pointer uppercase bg-blue-500 bg-opacity-50 rounded px-1 hover:text-indigo-300">
+                                Projekte
+                            </a>
+                        </Link>
+                    </div>
+                </div>
+            </nav>
+            <nav className="bg-blue-500 dark:bg-gray-700 hidden md:block">
+                <div className="py-3 px-4 mx-auto max-w-screen-xl md:px-6">
+                    <div className="flex items-center md:order-2 justify-end">
+                        <Menu as="div" className="relative inline-block text-left z-50">
+                            <div>
+                                <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-blue-500 text-lg font-medium text-gray-100 uppercase hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
+                                    Deutsch
+                                    <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
+                                </Menu.Button>
+                            </div>
 
-                    <div className='flex-col flex items-center w-auto hidden md:block'>
-                        <div className=' flex items-center justify-between'>
-                            <Link href="/">
-                                <a className="mx-2 cursor-pointer uppercase bg-blue-500 bg-opacity-50 rounded px-1 hover:text-indigo-300">
-                                    home
-                                </a>
-                            </Link>
-                            <Link href="/about">
-                                <a className="mx-2cursor-pointer uppercase bg-blue-500 bg-opacity-50 rounded px-1 hover:text-indigo-300">
-                                    about
-                                </a>
-                            </Link>
-                            <Link href="/ostturkestan">
-                                <a className="mx-2 cursor-pointer uppercase bg-blue-500 rounded bg-opacity-50 px-1 hover:text-indigo-300">
-                                    Ostturkestan
-                                </a>
-                            </Link>
-                            <Link href="/uiguren">
-                                <a className="mx-2 cursor-pointer uppercase bg-blue-500 bg-opacity-50 rounded px-1 hover:text-indigo-300">
-                                    uiguren
-                                </a>
-                            </Link>
-                            <Link href="/genocide">
-                                <a className="mx-2 cursor-pointer uppercase bg-blue-500 bg-opacity-50 rounded px-1 hover:text-indigo-300">
-                                    genozid
-                                </a>
-                            </Link>
-                            <Link href="/category/nachrichten">
-                                <a className="mx-2 cursor-pointer uppercase bg-blue-500 bg-opacity-50 rounded px-1 hover:text-indigo-300">
-                                    nachrichten
-                                </a>
-                            </Link>
-                            <Link href="/category/blog">
-                                <a className="mx-2 cursor-pointer uppercase bg-blue-500 bg-opacity-50 rounded px-1 hover:text-indigo-300">
-                                    blog
-                                </a>
-                            </Link>
-                            <Link href="/category/project">
-                                <a className="mx-2 cursor-pointer uppercase bg-blue-500 bg-opacity-50 rounded px-1 hover:text-indigo-300">
-                                    Projekte
-                                </a>
-                            </Link>
+                            <Transition
+                                as={Fragment}
+                                enter="transition ease-out duration-100"
+                                enterFrom="transform opacity-0 scale-95"
+                                enterTo="transform opacity-100 scale-100"
+                                leave="transition ease-in duration-75"
+                                leaveFrom="transform opacity-100 scale-100"
+                                leaveTo="transform opacity-0 scale-95"
+                            >
+                                <Menu.Items className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                    <div className="py-1">
+                                        <Menu.Item>
+                                            {({ active }) => (
+                                                <a
+                                                    href="http://deuydic.herokuapp.com/"
+                                                    className={classNames(
+                                                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                                        'block px-4 py-2 text-sm'
+                                                    )}
+                                                >
+                                                    Deutsch
+                                                </a>
+                                            )}
+                                        </Menu.Item>
+                                        <Menu.Item>
+                                            {({ active }) => (
+                                                <a
+                                                    href="http://deuydic.herokuapp.com/"
+                                                    className={classNames(
+                                                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                                        'block px-4 py-2 text-sm'
+                                                    )}
+                                                >
+                                                    ئۇيغۇرچە
+                                                </a>
+                                            )}
+                                        </Menu.Item>
+                                        <Menu.Item>
+                                            {({ active }) => (
+                                                <a
+                                                    href="#"
+                                                    className={classNames(
+                                                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                                        'block px-4 py-2 text-sm'
+                                                    )}
+                                                >
+                                                    English
+                                                </a>
+                                            )}
+                                        </Menu.Item>
+                                        <Menu.Item>
+                                            {({ active }) => (
+                                                <a
+                                                    href="#"
+                                                    className={classNames(
+                                                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                                        'block px-4 py-2 text-sm'
+                                                    )}
+                                                >
+                                                    Türk
+                                                </a>
+                                            )}
+                                        </Menu.Item>
+                                    </div>
+                                </Menu.Items>
+                            </Transition>
+                        </Menu>
 
-                        </div>
-                        <div className='flex w-full items-center justify-end pt-3'>
-                            <Link href="/de">
-                                <a className="mx-1 cursor-pointer uppercase bg-blue-500 rounded px-1 bg-opacity-50  border w-8 b-2 p-1 hover:text-indigo-300">De</a>
-                            </Link>
-                            <Link href="/uy">
-                                <a className="mx-1 cursor-pointer uppercase bg-blue-500 rounded px-1 bg-opacity-50  border b-2 p-1 w-8 hover:text-indigo-300">ئۇ</a>
-                            </Link>
-
+                        <div className="flex justify-center text-lg items-center md:justify-end">
                             <Link href="http://deuydic.herokuapp.com/" passHref={true}>
-                                <a className="mx-1 cursor-pointer bg-blue-500 rounded px-1 bg-opacity-50   uppercase hover:text-indigo-300">Wortbuch</a>
+                                <a className="mx-1 inline-block text-xl px-4 py-2 leading-none border bg-opacity-50 rounded text-white bg-blue-500 rounded px-1 border-white uppercase hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Wortbuch</a>
                             </Link>
                             <Link href="http://deuydic.herokuapp.com/" passHref={true}>
-                                <a className="mx-1 inline-block text-sm px-4 py-2 leading-none border bg-opacity-50 rounded text-white bg-blue-500 rounded px-1 border-white uppercase hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">spenden</a>
+                                <a className="mx-1 inline-block text-xl px-4 py-2 leading-none border bg-opacity-50 rounded text-white bg-blue-500 rounded px-1 border-white uppercase hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">spenden</a>
                             </Link>
                         </div>
                     </div>
                 </div>
-                <div className="flex w-full flex-auto items-center justify-between">
-                    
-                        <Link href="/">
-                            <a className="md:hidden sm:block">
-                                <Image src="/logo.png"
-                                    width={30}
-                                    height={43} alt="logo" />
-                            </a>
-                        </Link>
-            
-                    <div className="-mr-2 flex md:hidden">
-                        <button
-                            onClick={() => setIsOpen(!isOpen)}
-                            type="button"
-                            className="bg-blue-800 inline-flex items-center justify-center p-2 rounded-md text-gray-100 hover:text-white hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 focus:ring-white"
-                            aria-controls="mobile-menu"
-                            aria-expanded="false"
-                        >
-                            <span className="sr-only">Open main menu</span>
-                            {!isOpen ? (
-                                <svg
-                                    className="block h-6 w-6"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    aria-hidden="true"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M4 6h16M4 12h16M4 18h16"
-                                    />
-                                </svg>
-                            ) : (
-                                <svg
-                                    className="block h-6 w-6"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    aria-hidden="true"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M6 18L18 6M6 6l12 12"
-                                    />
-                                </svg>
-                            )}
-                        </button>
-                    </div>
+            </nav>
+
+
+
+            <div className="flex flex-auto px-4 py-2 items-center justify-between">
+
+                <Link href="/">
+                    <a className="md:hidden sm:block">
+                        <Image src="/logo.png"
+                            width={30}
+                            height={43} alt="logo" />
+                    </a>
+                </Link>
+
+                <div className="-mr-2 flex md:hidden">
+                    <button
+                        onClick={() => setIsOpen(!isOpen)}
+                        type="button"
+                        className="bg-blue-500 inline-flex items-center justify-center p-2 rounded-md text-gray-100 hover:text-white hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 focus:ring-white"
+                        aria-controls="mobile-menu"
+                        aria-expanded="false"
+                    >
+                        <span className="sr-only">Open main menu</span>
+                        {!isOpen ? (
+                            <svg
+                                className="block h-6 w-6"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M4 6h16M4 12h16M4 18h16"
+                                />
+                            </svg>
+                        ) : (
+                            <svg
+                                className="block h-6 w-6"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M6 18L18 6M6 6l12 12"
+                                />
+                            </svg>
+                        )}
+                    </button>
                 </div>
-            </header>
+
+            </div>
             <Transition
                 show={isOpen}
                 enter="transition ease-out duration-100 transform"
@@ -232,7 +317,12 @@ export default function Header() {
                         </div>
                     </div>)}
             </Transition>
-        </>
 
+
+
+
+        </div>
     )
 }
+
+export default Header
