@@ -56,16 +56,16 @@ function PostDetail({ post }) {
         />
       </div>
       <div className='px-4 lg:px-0'>
-        <div className='flex items-center mb-8 w-full'>
+        <div className='flex flex-wrap items-center justify-between mb-8'>
 
-          <div className="flex items-center mb-4 lg:mb-0 w-full lg:w-auto mr-8">
+          <div className="flex items-center align-middle mb-4 lg:mb-0 lg:w-auto mr-8">
             <img
 
               alt={post.autor.name}
               height="30px" width="30px"
               className="align-middle rounded-full"
               src={post.autor.foto.url} />
-            <p className="inline align-middle text-gray-700 ml-2 text-lg">{post.autor.name}</p>
+            <p className="inline align-middle text-gray-700 ml-2 text-md">{post.autor.name}</p>
           </div>
           <div className="font-medium text-gray-700">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
