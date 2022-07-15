@@ -106,8 +106,9 @@ function Header() {
                                     <div className="py-1">
                                         <Menu.Item>
                                             {({ active }) => (
+                                                
                                                 <a
-                                                    href="/"
+                                                href="/"
                                                     className={classNames(
                                                         active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                                                         'block px-4 py-2 text-sm'
@@ -115,12 +116,14 @@ function Header() {
                                                 >
                                                     Deutsch
                                                 </a>
+                                                
                                             )}
                                         </Menu.Item>
                                         <Menu.Item>
                                             {({ active }) => (
+                                                
                                                 <a
-                                                    href="/creating"
+                                                    href="/creating" 
                                                     className={classNames(
                                                         active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                                                         'block px-4 py-2 text-sm'
@@ -128,6 +131,7 @@ function Header() {
                                                 >
                                                     ئۇيغۇرچە
                                                 </a>
+                                              
                                             )}
                                         </Menu.Item>
                                         <Menu.Item>
